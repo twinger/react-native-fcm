@@ -24,14 +24,11 @@ repositories {
 }
 
 dependencies {
-    def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : DEFAULT_GOOGLE_PLAY_SERVICES_VERSION
-    def firebaseCoreVersion = project.hasProperty('firebaseCoreVersion') ? project.firebaseCoreVersion : DEFAULT_FIREBASE_CORE_VERSION
-    def firebaseMessagingVersion = project.hasProperty('firebaseMessagingVersion') ? project.firebaseMessagingVersion : DEFAULT_FIREBASE_MESSAGING_VERSION
 
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.facebook.react:react-native:+'
-    compile "com.google.firebase:firebase-core:$firebaseCoreVersion"
-    compile "com.google.firebase:firebase-messaging:$firebaseMessagingVersion"
+    compile "com.google.firebase:firebase-core:16.0.0"
+    compile "com.google.firebase:firebase-messaging:17.0.0"
     compile 'me.leolin:ShortcutBadger:1.1.17@aar'
     compile "com.android.support:support-core-utils:26.1.0"
 }
